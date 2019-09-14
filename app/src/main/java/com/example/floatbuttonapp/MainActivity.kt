@@ -28,13 +28,11 @@ class MainActivity : AppCompatActivity(), OnItemClick {
         setContentView(R.layout.activity_main)
 
          db = SQLiteHelper(this)
-        //  val adapter = RecyclerAdapter(this)
 
-//        adapter.addRecipe(Recipe(1, "name", "des"))
-//        adapter.addRecipe(Recipe(2, "name", "des"))
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
+
 
         buttonGetAll.setOnClickListener {
 
@@ -45,9 +43,6 @@ class MainActivity : AppCompatActivity(), OnItemClick {
             db.deleteAll()
             getRecipes()
         }
-
-//        recyclerView.layoutManager = LinearLayoutManager(this)
-//        recyclerView.adapter = adapter
 
 
         fab.setOnClickListener {

@@ -28,20 +28,7 @@ class RecyclerAdapter(private val onItemClick: OnItemClick) :
         }
     }
 
-//    fun addRecipe(recipe: Recipe) {
-//    //    recipes.add(recipe)
-//        notifyDataSetChanged()
-//    }
 
-    //    fun clearRecipes(){
-//        recipes.clear()
-//        notifyDataSetChanged()
-//    }
-//
-//    fun deleteRecipe(id:Int){
-//        recipes.removeAt(id)
-//        notifyDataSetChanged()
-//    }
     fun updateRecipes(recipes: List<Recipe>) {
         this.recipes = recipes
         notifyDataSetChanged()

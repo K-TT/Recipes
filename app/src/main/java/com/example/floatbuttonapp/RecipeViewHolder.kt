@@ -22,6 +22,8 @@ class RecipeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(recipe: Recipe) {
         recipeNameTextView.text = recipe.name
         recipeDescriptionTextView.text = recipe.description
+//        recipeNameTextView.setTextColor(0xffff)
+//        recipeDescriptionTextView.setTextColor(0xffff)
     }
 
 }

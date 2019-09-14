@@ -7,29 +7,26 @@
 
     <TextView
         android:id="@+id/oldName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/TextViewPrimary"
         />
     <TextView
         android:id="@+id/oldDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/TextViewPrimary"
         />
 
 
     <EditText
         android:id="@+id/itemName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/TextViewPrimary"
+        android:hint="@string/name"
         />
     <EditText
         android:id="@+id/itemDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/TextViewPrimary"
+        android:hint="@string/description"
         />
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ButtonNeutral"
         android:text="@string/edit"
         android:id="@+id/edit"
         />
