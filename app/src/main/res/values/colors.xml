@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="myColor">#245</color>
     <color name="backgroundColor">#E6E6E6</color>
+    <color name="menuColor">#1168D3</color>
 </resources>

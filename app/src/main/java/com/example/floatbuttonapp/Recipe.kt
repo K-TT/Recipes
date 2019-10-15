@@ -1,7 +1,11 @@
 package com.example.floatbuttonapp
 
+import com.google.gson.annotations.SerializedName
+
 data class Recipe(
-    val id: Int,
-    val name: String,
-    val description: String
+    @SerializedName("id")val id: Int,
+    @SerializedName("title")val name: String,
+    @SerializedName("image")val image:String?,
+    val description: String?
+
 )

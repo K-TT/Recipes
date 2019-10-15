@@ -3,18 +3,18 @@ package com.example.floatbuttonapp
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.Toast
+
 import androidx.appcompat.app.AlertDialog
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import kotlinx.android.synthetic.main.activity_main.*
-import androidx.core.app.ComponentActivity
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import retrofit2.Call
+import retrofit2.Response
+import retrofit2.Callback
 
 
 class MainActivity : AppCompatActivity(), OnItemClick {
@@ -23,20 +23,45 @@ class MainActivity : AppCompatActivity(), OnItemClick {
     private lateinit var db:SQLiteHelper
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
          db = SQLiteHelper(this)
 
 
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = adapter
+        val restService = RestService()
+        val call = restService.getApiClient().getRecipes()
 
+        call.enqueue(object : retrofit2.Callback<ResponseModel>{
+            override fun onFailure(call: Call<ResponseModel>, t: Throwable) {
+            println("Error")
+            }
+            override fun onResponse(call: Call<ResponseModel>, response: Response<ResponseModel>) {
+                println("Success")
+                if(response.body()!=null){
+                    val recipes = response.body()!!.results
+                    adapter.updateRecipes(recipes)
+                }
+
+            }
+        })
+
+
+
+        val layoutManager = GridLayoutManager(this, 2)
+        val divider = DividerItemDecoration(this, layoutManager.orientation)
+
+        recyclerView.layoutManager = layoutManager
+        recyclerView.addItemDecoration(divider)
+        recyclerView.adapter = adapter
 
         buttonGetAll.setOnClickListener {
 
            getRecipes()
+
 
         }
         buttonDeleteAll.setOnClickListener {

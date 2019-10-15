@@ -8,4 +8,9 @@
     <string name="text_view">TextView</string>
     <string name="edit">Edit</string>
     <string name="name">Name</string>
+    <string name="add">Add</string>
+    <string name="search">search</string>
+    <string name="collections">collections</string>
+    <string name="shopping">shopping</string>
+    <string name="favorite">favorite</string>
 </resources>

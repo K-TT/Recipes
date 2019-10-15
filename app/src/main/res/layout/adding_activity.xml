@@ -15,7 +15,7 @@
         android:hint="@string/description"
         />
     <Button
-        style="@style/ButtonPositive"
+        style="@style/ButtonPrimary"
         android:text="@string/create"
         android:id="@+id/create"
         />

@@ -43,7 +43,9 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "app.db", null,
                 val recipe = Recipe(
                     Integer.parseInt(cursor.getString(0)),
                     cursor.getString(1),
+                    null,
                     cursor.getString(2)
+
                 )
                 recipes.add(recipe)
             } while (cursor.moveToNext())
@@ -62,6 +64,7 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "app.db", null,
             val recipe = Recipe(
                 Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1),
+                null,
                 cursor.getString(2)
             )
             recipe
