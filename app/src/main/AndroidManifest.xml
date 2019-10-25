@@ -21,12 +21,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".AddingActivity">
-        </activity>
-        <activity
-            android:name=".EditingActivity">
-        </activity>
     </application>
 
 </manifest>

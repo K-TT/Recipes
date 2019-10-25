@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         style="@style/NameText"
         android:text=""
-        android:maxLines="1"
+        android:maxLines="2"
         android:ellipsize="end"
         />
 

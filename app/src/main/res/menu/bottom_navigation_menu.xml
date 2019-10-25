@@ -8,10 +8,11 @@
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_action_favorite"/>
     <item
-        android:id="@+id/shopping"
-        android:title="@string/shopping"
+        android:id="@+id/addItem"
+        android:title="@string/add"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_action_shopping"
+        android:icon="@drawable/ic_action_create"
+
        />
     <item
         android:id="@+id/collections"

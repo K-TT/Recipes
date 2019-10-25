@@ -32,6 +32,5 @@ class RecyclerAdapter(private val onItemClick: OnItemClick) :
     fun updateRecipes(recipes: List<Recipe>) {
         this.recipes = recipes
         notifyDataSetChanged()
-
     }
 }
