@@ -25,6 +25,7 @@
             android:layout_height="wrap_content"/>
 
         <EditText
+            android:focusedByDefault="false"
             android:id="@+id/editText"
             android:layout_width="0dp"
             android:layout_weight="1"

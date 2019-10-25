@@ -1,7 +1,10 @@
 package com.example.floatbuttonapp
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
@@ -12,6 +15,7 @@ import retrofit2.Response
 class SearchFragment: Fragment(R.layout.fragment_search), OnItemClick{
 
     private val adapter = RecyclerAdapter(this)
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -40,9 +44,13 @@ class SearchFragment: Fragment(R.layout.fragment_search), OnItemClick{
 
             }
         })
+     
     }
+
     override fun onClick(recipe: Recipe) {
-        //Toast.makeText(this, "${recipe.id}", Toast.LENGTH_SHORT).show()
+        val dialog = EditingDialog(activity!!)
+        dialog.show()
+
     }
 
 

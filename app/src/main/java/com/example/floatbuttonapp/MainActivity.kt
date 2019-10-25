@@ -1,6 +1,7 @@
 package com.example.floatbuttonapp
 
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity(){
         setContentView(R.layout.activity_main)
 
 
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         switchFragment(0)
         bottomNavView.setOnNavigationItemSelectedListener { menuItem ->
             switchFragment(menuItem.itemId)
@@ -47,6 +49,7 @@ class MainActivity : AppCompatActivity(){
         val fragmentTransaction:FragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.container,fragment)
         fragmentTransaction.commit()
+
     }
 
 }

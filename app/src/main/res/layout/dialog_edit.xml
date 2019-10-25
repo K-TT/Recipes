@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/image3"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="@+id/ln"
+        app:layout_constraintBottom_toBottomOf="@+id/ln"
+        />
+
+    <LinearLayout
+        android:id="@+id/ln"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/oldName"
+        style="@style/TextViewPrimary"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/oldDescription"
+        style="@style/TextViewPrimary"
+        />
+
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/itemName"
+        style="@style/TextViewPrimary"
+        android:hint="@string/name"
+        />
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/itemDescription"
+        style="@style/TextViewPrimary"
+        android:hint="@string/description"
+        />
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        style="@style/ButtonPrimary"
+        android:text="@string/edit"
+        android:id="@+id/edit"
+        />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

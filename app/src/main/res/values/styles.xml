@@ -16,14 +16,11 @@
     <style name="TextViewPrimary">
         <item name="android:textColor">#fff</item>
         <item name="android:textSize">14sp</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
 
     </style>
-    <style name="ButtonPrimary">
+    <style name="ButtonPrimary" parent="@style/Widget.AppCompat.Button">
         <item name="android:textSize">14sp</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edit_button</item>
         <item name="android:layout_marginTop">8dp</item>
 
     </style>
